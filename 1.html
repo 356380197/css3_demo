@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Css3手机界面侧边栏展示隐藏效果</title>
+		<style type="text/css">
+		    *{ margin: 0;padding: 0;}
+			body{background:hotpink;color: #FFF;}
+			.contoner{width: 640px;min-height: 500px;margin:50px auto; background:hotpink;}
+		    .min{width: 320px;position: relative;box-shadow: 0px 0px 25px rgba(0,0,0,.5);
+		          min-height: 500px;}
+		    .nav{width: 150px; background:hotpink;
+		         position: absolute;left: 0;top: 0;bottom: 0; padding-top: 100px;}
+		    .nav li{list-style: none;box-sizing:border-box/*包含在内*/;
+		           }
+		    .nav li a{display: block;text-decoration: none;color:#fff;
+		              line-height:40px;padding:0 20px;  font-size: 12px;}
+		    .nav li a i{width: 40px;height: 40px;float:left; color: #FFF;}
+		    .nav li:nth-child(1)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(2)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(3)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(4)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(5)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(6)a i{ background: url(img/img.png);}
+		    .nav li:nth-child(7)a i{ background: url(img/img.png);}
+		    .nav li a b{position: relative; left: 10px;transition:left 2s;} 
+			 .nav li a:hover b{left:-5px;}
+		    .nav li  a:hover{ background:pink;} 
+		    .nav li  a:hover i{background-position:top;}
+            .nav li  a:hover i{opacity: 1;}
+            .min section{background:deeppink;width: 320px;height: 500px;position:relative;transition: all0.5s;}
+            .min section label{font:bold 18px monaco;text-align: center; border:7px solid #FFFFFF;
+            border-radius: 4px;padding: 10px;display: block;width: 60%;position: absolute;left: 20%;top: 100px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,.5);cursor: pointer;}
+           #tm {display:none;}
+           #tm:checked~section{transform: translateX(150px);box-shadow: -1px 1px 18px #FF1493;}
+          #tm:checked~.nav{ transition: all 4s ease;} 
+		</style>
+	</head>
+	<body>
+		<div class="contoner">
+			<div class="min">
+				<!--按钮控制导航-->
+				<input type="checkbox" id="tm" />
+				<!--导航-->
+				<ul class="nav">
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>要你管我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+					<li><a href="#"><i>&hArr;</i><b>我就是我</b></a></li>
+				</ul>
+				<!--图片 -->
+                <section>
+                	<label for="tm">点我点我</label>
+                </section>	
+               
+			</div>
+                	
+               
+		</div>
+	</body>
+</html>
